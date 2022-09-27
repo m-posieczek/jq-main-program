@@ -5,9 +5,11 @@
   "projects": {
     "jqpl-main-program": {
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale":"en-US",
         "locales": {
-          "pl-PL": "src/locale/ui-resources.pl.xlf"
+          "pl":{
+            "translation": "src/locale/messages.pl.xlf"
+          }
         }
       },
       "projectType": "application",
@@ -19,9 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": [
-              "pl-PL"
-            ],
+            "localize": true,
             "outputPath": "dist/jqpl-main-program",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -70,6 +70,9 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "pl": {
+              "localize": ["pl"]
             }
           },
           "defaultConfiguration": "production"
@@ -82,6 +85,9 @@
             },
             "development": {
               "browserTarget": "jqpl-main-program:build:development"
+            },
+            "pl": {
+              "browserTarget": "jqpl-main-program:build:development,pl"
             }
           },
           "defaultConfiguration": "development"
