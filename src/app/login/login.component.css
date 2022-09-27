@@ -1,0 +1,75 @@
+body {
+    background-color: #eee;
+    zoom: 3;
+    -moz-transform: scale(3); 
+    -moz-transform-origin: 0 0;
+}
+
+h3 {
+    margin-left: 5px;
+}
+
+.container {
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.centered {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    margin: 3em;
+}
+
+.form-card {
+    width: 400px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.card-header {
+    background-color: #1f4e7a;
+    color: white;
+    width: inherit;
+    margin-bottom: 30px;
+    border-radius: 10px 10px 0 0;
+}
+
+::ng-deep .mat-card-header-text {
+    /* CSS styles go here */
+    margin: 6px !important;
+}
+
+.card-content {
+    margin: auto;
+    width: 90%;
+    height: fit-content;
+    background-color: white;
+}
+
+.form-input {
+    width: 100%;
+}
+
+#btn-login {
+    width: 100%;
+    background-color: #5cb85c;
+    margin-bottom: 20px;
+}
+
+#btn-language {
+    margin: auto;
+    margin-right: 10px;
+}

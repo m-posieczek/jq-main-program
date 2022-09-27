@@ -1,0 +1,35 @@
+<div class="container centered">
+    <div class="logo">
+        <img src="assets/JoysonQuinLogo_clear.png" alt="JQPL">
+    </div>
+
+    <mat-card class="form-card">
+        <mat-card-header class="card-header">
+            <h3 i18n>Login</h3>
+            <button id="btn-language" mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>language</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>English</button>
+                <button mat-menu-item>Polski</button>
+            </mat-menu>
+        </mat-card-header>
+        <mat-card-content class="card-content">
+            <mat-form-field class="form-input" appearance="outline">
+                <mat-label i18n>Username</mat-label>
+                <input type="text" matInput [formControl]="usernameFormControl" placeholder="username">
+                <mat-error *ngIf="usernameFormControl.hasError('required')" i18n>
+                    Username is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-input" appearance="outline">
+                <mat-label i18n>Password</mat-label>
+                <input type="password" matInput [formControl]="passwordFormControl" placeholder="password">
+                <mat-error *ngIf="passwordFormControl.hasError('required')" i18n>
+                    Password is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <button id="btn-login" type="submit" mat-raised-button i18n>Login</button>
+        </mat-card-content>
+    </mat-card>
+</div>
